@@ -3,15 +3,19 @@
 import videojs from "video.js"
 import "videojs-playlist"
 import "videojs-playlist-ui"
+import {useRef, useEffect, useState} from "react"
+import { Container } from "react-bootstrap"
+import { Videolist } from "../playlist/playlistvideo/VideoList"
+import { Playlist } from "../playlist/Playlist"
+
 import "videojs-playlist-ui/dist/videojs-playlist-ui.css"
-import {useRef, useEffect} from "react"
 import 'video.js/dist/video-js.css'
 import "./VideoPlayer.scss"
 
 const VideoPlayer = (props) => {
     const videoRef = useRef(null);
     const playerRef = useRef(null);
-    const {options, onReady, videoList} = props;
+    const {options, onReady} = props;
 
     useEffect(() => {
 
@@ -21,13 +25,13 @@ const VideoPlayer = (props) => {
         const videoElement = document.createElement("video-js");
         videoElement.classList.add('vjs-big-play-centered');
         videoRef.current.appendChild(videoElement);
-  
+
         const player = playerRef.current = videojs(videoElement, options, () => {
           videojs.log('player is ready');
           onReady && onReady(player);
         });
 
-        player.playlist(videoList);
+        player.playlist(Videolist);
         player.playlist.autoadvance(0);
         player.playlistUi();
 
@@ -35,16 +39,17 @@ const VideoPlayer = (props) => {
       // on prop change, for example:
       } else {
         const player = playerRef.current;
-  
+
         player.autoplay(options.autoplay);
         player.src(options.sources);
       }
     }, [options, videoRef]);
-  
+
+
     // Dispose the Video.js player when the functional component unmounts
     useEffect(() => {
       const player = playerRef.current;
-  
+
       return () => {
         if (player && !player.isDisposed()) {
           player.dispose();
@@ -52,12 +57,12 @@ const VideoPlayer = (props) => {
         }
       };
     }, [playerRef]);
-  
+
     return (
-      <div className="videoContainer" data-vjs-player>
-        <div ref={videoRef} />
-        <div className="vjs-playlist videoplaylist"  />
-    </div>
+        <Container className="videoContainer" data-vjs-player>
+          <div ref={videoRef} />
+          <Playlist />
+        </Container>
     )
 }
 

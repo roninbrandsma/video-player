@@ -9,7 +9,7 @@ export let Videolist = [
           type: "video/mp4"
         }
       ],
-      poster: "https://media.w3.org/2010/05/sintel/poster.png",
+      poster: "/planetposter1.png",
       thumbnail: "https://media.w3.org/2010/05/sintel/poster.png"
     },
     {
@@ -39,7 +39,7 @@ export let Videolist = [
           type: "video/mp4"
         }
       ],
-      poster: "https://media.w3.org/2010/05/bunny/poster.png",
+      poster: "/carpark1.png",
       thumbnail: "https://media.w3.org/2010/05/sintel/poster.png"
     }
   ];

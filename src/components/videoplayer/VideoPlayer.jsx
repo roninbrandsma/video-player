@@ -35,16 +35,15 @@ const VideoPlayer = (props) => {
         player.playlist.autoadvance(0);
         player.playlistUi();
 
-      // You could update an existing player in the `else` block here
-      // on prop change, for example:
+        // You could update an existing player in the `else` block here
+        // on prop change, for example:
       } else {
         const player = playerRef.current;
 
         player.autoplay(options.autoplay);
-        player.src(options.sources);
+        player.src(props.videoSrc);
       }
     }, [options, videoRef]);
-
 
     // Dispose the Video.js player when the functional component unmounts
     useEffect(() => {
@@ -59,11 +58,10 @@ const VideoPlayer = (props) => {
     }, [playerRef]);
 
     return (
-        <Container className="videoContainer" data-vjs-player>
+      <div className="videoContainer" data-vjs-player>
           <div ref={videoRef} />
-          <Playlist />
-        </Container>
+      </div>
     )
-}
+  }
 
 export default VideoPlayer

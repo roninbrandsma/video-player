@@ -1,0 +1,34 @@
+.videoSelected {
+    filter: blur(2px) !important;
+}
+
+.videoplaylist {
+    height: 100%;
+    width: 100%;
+}
+
+.playlist-heading {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 24px;
+    height: 81px;
+    width: 349px;
+    justify-self: center;
+    justify-content: center;
+    align-content: center;
+    border-bottom: grey 1px solid;
+}
+
+.playlist-item-list {
+    display: grid;
+    justify-content: center;
+    padding: 0;
+}
+
+.vjs-playlist-vertical .vjs-playlist-item {
+    height: 184px;
+    width: 327px;
+    border: grey solid 2px;
+    margin-top: 14px;
+    margin-bottom: 14px;
+}

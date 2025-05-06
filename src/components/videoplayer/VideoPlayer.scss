@@ -1,41 +1,11 @@
 .videoContainer {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: 45px;
-    margin-right: 45px;
+    margin: auto;
+    margin-left: 80px;
+    margin-right: 80px;
 }
 
-.videoplaylist {
-    height: 700px;
-    width: 396px;
-    padding: 10px;
-}
-
-.playlist-heading {
-    display: flex;
-    flex-wrap: wrap;
-    font-size: 24px;
-    height: 45px;
-    width: 349px;
-    justify-self: center;
-    justify-content: center;
-    align-content: center;
-    margin-top: 12px;
-    margin-bottom: 22px;
-}
-
-.playlist-item-list {
-    display: grid;
-    justify-content: center;
-    padding: 0;
-}
-
-.vjs-playlist-vertical .vjs-playlist-item {
-    height: 184px;
-    width: 327px;
-    border: grey solid 1px;
-    margin-top: 14px;
-    margin-bottom: 28px;
+@media screen and (width <= 800) {
+    .videoContainer {
+        margin: 0;
+    }
 }

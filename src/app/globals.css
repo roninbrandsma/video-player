@@ -19,7 +19,14 @@ html {
 }
 
 .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background-color: #393D3F;
-  flex: 1;
-  padding: 20px;
+}
+
+@media screen and (width <= 1870) {
+  .content {
+    flex-direction: column;
+  }
 }

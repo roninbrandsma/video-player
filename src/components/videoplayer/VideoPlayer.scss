@@ -1,7 +1,6 @@
 .videoContainer {
     margin: auto;
-    margin-left: 80px;
-    margin-right: 80px;
+    max-height: 720px;
 }
 
 @media screen and (width <= 800) {
@@ -9,3 +8,22 @@
         margin: 0;
     }
 }
+
+@media screen and (width >= 1024) {
+    .videoContainer {
+        margin-left: 80px;
+        margin-right: 80px;
+    }
+}
+
+@media screen and (width >= 1850) {
+    .videoContainer {
+        width: 1280px;
+    }
+}
+
+@media screen and (width <= 1870) {
+    .videoContainer {
+        justify-self: center;
+    }
+  }

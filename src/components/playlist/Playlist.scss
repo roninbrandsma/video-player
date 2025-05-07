@@ -3,9 +3,16 @@
 }
 
 .videoplaylist {
-    height: 100%;
-    width: 100%;
+    max-height: 720px;
+    width: auto;
+    margin-right: 80px;
 }
+
+@media screen and (width <= 1870) {
+    .videoplaylist {
+        margin: 0;
+    }
+  }
 
 .playlist-heading {
     display: flex;
@@ -22,7 +29,8 @@
 .playlist-item-list {
     display: grid;
     justify-content: center;
-    padding: 0;
+    padding-left: 1vw;
+    padding-right: 1vw;
 }
 
 .vjs-playlist-vertical .vjs-playlist-item {

@@ -3,10 +3,8 @@
 import videojs from "video.js"
 import "videojs-playlist"
 import "videojs-playlist-ui"
-import {useRef, useEffect, useState} from "react"
-import { Container } from "react-bootstrap"
+import {useRef, useEffect } from "react"
 import { Videolist } from "../playlist/playlistvideo/VideoList"
-import { Playlist } from "../playlist/Playlist"
 
 import "videojs-playlist-ui/dist/videojs-playlist-ui.css"
 import 'video.js/dist/video-js.css'

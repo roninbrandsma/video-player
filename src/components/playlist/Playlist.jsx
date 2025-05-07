@@ -5,7 +5,6 @@ import "./Playlist.scss"
 
 export const Playlist = ({videos, onSelect, playing}) => {
     const className = "vjs-playlist-item listItem"
-    const [selected, setSelected] = useState(false);
 
     const handleClick = (id) => {
         let elements = document.querySelectorAll(".listItem")

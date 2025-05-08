@@ -19,14 +19,15 @@ export const Playlist = ({videos, onSelect, playing}) => {
                 {videos.map((video, index) => {
                     let isActive = video.sources[0] === playing ? true : false
                     return(
-                    <ListGroupItem key={index} onClick={() => onSelect(video.sources[0])} className={isActive ? "vjs-playlist-item videoSelected" : "vjs-playlist-item"}>
-                        <picture className="vjs-playlist-thumbnail vjs-playlist-now-playing">
-                            <Image src={`${video.poster}`} />
-                            <div className="vjs-playlist-title-container">
-                                <cite className="vjs-playlist-name" title="Untitled Video">{video.title}</cite>
-                            </div>
-                        </picture>
-                    </ListGroupItem>
+                        <ListGroupItem key={index} onClick={() => onSelect(video.sources[0])} className="vjs-playlist-item">
+                            <picture className="vjs-playlist-thumbnail">
+                                <Image src={`${video.poster}`} className={isActive ? "vjs-playlist-image videoSelected" : "vjs-playlist-image"} />
+                                <div className="vjs-playlist-title-container">
+                                    {isActive && <span>Now playing</span>}
+                                    <cite className="vjs-playlist-name" title="Untitled Video">{video.title}</cite>
+                                </div>
+                            </picture>
+                        </ListGroupItem>
                 )})}
             </ListGroup>
         </Container>

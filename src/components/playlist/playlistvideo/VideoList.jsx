@@ -10,7 +10,8 @@ export let Videolist = [
         }
       ],
       poster: "/planetposter1.png",
-      thumbnail: "https://media.w3.org/2010/05/sintel/poster.png"
+      thumbnail: "https://media.w3.org/2010/05/sintel/poster.png",
+      title: "Spinning World"
     },
     {
       sources: [
@@ -20,7 +21,8 @@ export let Videolist = [
         }
       ],
       poster: "https://media.w3.org/2010/05/bunny/poster.png",
-      thumbnail: "https://media.w3.org/2010/05/sintel/poster.png"
+      thumbnail: "https://media.w3.org/2010/05/sintel/poster.png",
+      title: "Corridor"
     },
     {
       sources: [
@@ -30,7 +32,8 @@ export let Videolist = [
         }
       ],
       poster: "https://media.w3.org/2010/05/bunny/poster.png",
-      thumbnail: "https://media.w3.org/2010/05/sintel/poster.png"
+      thumbnail: "https://media.w3.org/2010/05/sintel/poster.png",
+      title: "Big Rabbit"
     },
     {
       sources: [
@@ -40,6 +43,7 @@ export let Videolist = [
         }
       ],
       poster: "/carpark1.png",
-      thumbnail: "https://media.w3.org/2010/05/sintel/poster.png"
+      thumbnail: "https://media.w3.org/2010/05/sintel/poster.png",
+      title: "Carpark"
     }
   ];

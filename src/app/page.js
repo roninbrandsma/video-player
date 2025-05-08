@@ -25,7 +25,7 @@ export default function Home() {
       medium: 768,
       small: 425,
       xsmall: 100,
-      tiny: 50
+      tiny: 50,
     },
     playbackRates: [0.5, 1, 1.5, 2, 2.5, 3],
     controlBar: {
@@ -48,7 +48,7 @@ export default function Home() {
     <div className="page-container">
       <Header />
       <div className="content">
-        <VideoPlayer options={videoJsOptions} onReady={handlePlayerReady} videoSrc={videoPlaying} />
+        <VideoPlayer options={videoJsOptions} onReady={handlePlayerReady} videoSrc={videoPlaying}/>
         <Playlist videos={Videolist} onSelect={handleSelectVideo} playing={videoPlaying} />
       </div>
       <Footer />

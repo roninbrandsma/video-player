@@ -29,6 +29,8 @@ const VideoPlayer = (props) => {
           onReady && onReady(player);
         });
 
+        console.log(videoRef)
+
         player.playlist(Videolist);
         player.playlist.autoadvance(0);
         player.playlistUi();
@@ -58,6 +60,7 @@ const VideoPlayer = (props) => {
     return (
       <div className="videoContainer" data-vjs-player>
           <div ref={videoRef} />
+          <div className="videoTitle"></div>
       </div>
     )
   }

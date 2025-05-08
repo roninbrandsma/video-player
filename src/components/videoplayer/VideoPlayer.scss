@@ -1,6 +1,13 @@
 .videoContainer {
     margin: auto;
-    max-height: 720px;
+}
+
+.videoTitle {
+    height: 100px;
+    background-color: #27292B;
+    color: white;
+    padding: 15px;
+    font-size: 30px;
 }
 
 @media screen and (width <= 800) {
@@ -26,4 +33,4 @@
     .videoContainer {
         justify-self: center;
     }
-  }
+}

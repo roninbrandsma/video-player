@@ -3,12 +3,13 @@
 import videojs from "video.js"
 import "videojs-playlist"
 import "videojs-playlist-ui"
-import {useRef, useEffect } from "react"
+import { useRef, useEffect, useState } from "react"
 import { Videolist } from "../playlist/playlistvideo/VideoList"
 
 import "videojs-playlist-ui/dist/videojs-playlist-ui.css"
 import 'video.js/dist/video-js.css'
 import "./VideoPlayer.scss"
+import { VideoTitle } from "./videotitle/VideoTitle"
 
 const VideoPlayer = (props) => {
     const videoRef = useRef(null);
@@ -57,10 +58,16 @@ const VideoPlayer = (props) => {
       };
     }, [playerRef]);
 
+    const [videoTitle, setVideoTitle] = useState(Videolist[0].title)
+
+    const handleVideoTitle = (title) => {
+      setVideoTitle(title)
+    }
+
     return (
       <div className="videoContainer" data-vjs-player>
           <div ref={videoRef} />
-          <div className="videoTitle"></div>
+          <VideoTitle videos={Videolist} onSelect={handleVideoTitle} title={videoTitle} />
       </div>
     )
   }
